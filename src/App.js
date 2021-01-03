@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+// article referenced: https://github.com/adamchainz/django-cors-headers
+// article referenced: https://reactjs.org/docs/faq-ajax.html
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -17,15 +19,16 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        <h1>Shoe store</h1>
         <ul>
-          {this.state.shoe.map((p) => (
+          {this.state.shoe.map((shoe) => (
             <li>
-              <p>ID: {p.id}</p>
-              <p>Size: {p.size}</p> <p>Brand Name: {p.brand_name}</p>
-              <p>Manufacturer: {p.manufacturer}</p> <p>Color: {p.color}</p>{' '}
-              <p>Material: {p.material}</p>
-              <p>Shoe Type: {p.shoe_type}</p>{' '}
-              <p>Fasten Type: {p.fasten_type}</p>
+              <p>ID: {shoe.id}</p>
+              <p>Size: {shoe.size}</p> <p>Brand Name: {shoe.brand_name}</p>
+              <p>Manufacturer: {shoe.manufacturer}</p>{' '}
+              <p>Color: {shoe.color}</p> <p>Material: {shoe.material}</p>
+              <p>Shoe Type: {shoe.shoe_type}</p>{' '}
+              <p>Fasten Type: {shoe.fasten_type}</p>
             </li>
           ))}
         </ul>
